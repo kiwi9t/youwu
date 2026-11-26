@@ -24,5 +24,5 @@ npm run build    # production build in dist/
 
 ## Deploying
 
-`.github/workflows/deploy.yml` builds and publishes the site on every push to `main`.
+`.github/workflows/deploy.yml` builds and publishes the site on every push to `main`, at https://kiwi9t.github.io/youwu/ (the base path follows the repo name automatically).
 One-time setup: in the repository's **Settings → Pages**, set **Source** to **GitHub Actions**.

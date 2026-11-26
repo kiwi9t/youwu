@@ -11,7 +11,7 @@ export const profile = {
     'Business Analytics graduate student at the University of Illinois, with a finance background and a habit of building the tools I wish existed.',
   // Put your photo in /public (for example /public/photo.jpg) and set photo: 'photo.jpg'.
   // Leave it empty to show your initials instead.
-  photo: '',
+  photo: 'photo.jpg',
   glance: [
     { label: 'Major, University of Illinois', value: 'M.S. Business Analytics', wide: true },
     { label: 'GPA', value: '3.95/4.0' },
@@ -28,7 +28,7 @@ export const links = {
   email: 'youwu66@outlook.com',
   // Paste your Formspree form URL here (for example https://formspree.io/f/abcdwxyz).
   // While it is empty, "Send message" opens the visitor's email app instead.
-  formEndpoint: '',
+  formEndpoint: 'https://formspree.io/f/mvkaldwy',
 };
 
 export const about = [
