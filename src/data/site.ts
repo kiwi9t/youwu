@@ -28,7 +28,7 @@ export const links = {
   email: 'youwu66@outlook.com',
   // Paste your Formspree form URL here (for example https://formspree.io/f/abcdwxyz).
   // While it is empty, "Send message" opens the visitor's email app instead.
-  formEndpoint: '',
+  formEndpoint: 'https://formspree.io/f/mvkaldwy',
 };
 
 export const about = [
