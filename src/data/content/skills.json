@@ -1,0 +1,57 @@
+{
+  "groups": [
+    {
+      "show": true,
+      "name": "Data & analytics",
+      "skills": [
+        "Python",
+        "SQL",
+        "R",
+        "Stata",
+        "Excel",
+        "Regression",
+        "A/B Testing",
+        "XGBoost"
+      ]
+    },
+    {
+      "show": true,
+      "name": "AI & building",
+      "skills": [
+        "LLM Agents",
+        "Prompt Engineering",
+        "TypeScript",
+        "React",
+        "Node.js"
+      ]
+    },
+    {
+      "show": true,
+      "name": "Product & business",
+      "skills": [
+        "Project Management",
+        "Client Communication",
+        "Research",
+        "Dashboard",
+        "MVP Scoping"
+      ]
+    },
+    {
+      "show": true,
+      "name": "Tools & languages",
+      "skills": [
+        "Notion",
+        "Figma",
+        "Dune",
+        "English",
+        "Mandarin"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "show": true,
+      "name": "AI Agents Fundamentals, Hugging Face (2026)"
+    }
+  ]
+}

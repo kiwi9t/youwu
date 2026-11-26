@@ -4,15 +4,29 @@ Personal portfolio site, built with [Astro](https://astro.build) and deployed to
 
 ## Editing content
 
-All text on the site lives in one file: [`src/data/site.ts`](src/data/site.ts).
-Open it, change the words, commit, and the site redeploys on its own.
+### In the browser (recommended)
 
-- **Resume:** put the PDF in `public/` as `You_Wu_Resume.pdf` (or change `links.resume`).
-- **Photo:** put an image in `public/` and set `profile.photo` to its file name.
-- **Project screenshots:** put images in `public/projects/` and set `image: 'projects/<file>'` on a project.
-- **Contact form:** create a free form at [Formspree](https://formspree.io), then paste its URL into `links.formEndpoint`.
-  Until then, "Send message" opens the visitor's email app.
+Open **https://kiwi9t.github.io/youwu/admin/** and choose **Sign In Using Access Token**.
+
+- **Who can edit:** only a GitHub account with write access to this repository can save. Today that is only `kiwi9t`.
+- **Access token (one-time):** on GitHub go to Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token.
+  Limit it to the `kiwi9t/youwu` repository, give it **Contents: Read and write**, and paste it into the editor.
+  The token stays in your browser only. Never commit it to the repository.
+- **Preview:** the right half of the editor updates as you type. After **Save**, the live site updates in about 1–2 minutes.
+- **Show / hide:** every item (glance rows, about paragraphs, schools, roles, projects, skill groups, certifications, interests) has a **Show on site** switch.
+  Hidden items stay in the editor, marked `[Hidden]`, and can be turned back on at any time. A section with no visible items disappears.
+- **History:** every save is a commit on `main` starting with `Content:`. See the [commit history](https://github.com/kiwi9t/youwu/commits/main/src/data/content), and use **Revert** on a commit to undo it.
+- **Uploads:** images and files uploaded in the editor go to `public/uploads/`.
+
+### By hand
+
+The words live in the JSON files in [`src/data/content/`](src/data/content/), one per section.
+[`src/data/site.ts`](src/data/site.ts) reads them and drops any item with `"show": false`.
+
+- **Resume:** put the PDF in `public/` as `You_Wu_Resume.pdf` (or change `links.resume` in `profile.json`).
+- **Contact form:** paste a [Formspree](https://formspree.io) form URL into `links.formEndpoint`. While it is empty, "Send message" opens the visitor's email app.
 - **Skills:** a skill that also appears in an Experience or Project `tags` list becomes a clickable filter.
+- **Editor settings:** [`public/admin/config.yml`](public/admin/config.yml) defines the editor's forms.
 
 ## Running locally
 

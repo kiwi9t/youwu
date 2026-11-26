@@ -1,0 +1,94 @@
+{
+  "categories": [
+    "Data",
+    "AI",
+    "Product",
+    "Marketing",
+    "Finance"
+  ],
+  "items": [
+    {
+      "show": true,
+      "id": "qr",
+      "title": "Quiet Reader",
+      "kind": "Personal project, 2026",
+      "cats": [
+        "AI",
+        "Product"
+      ],
+      "link": "https://github.com/kiwi9t/Quite-Reader",
+      "summary": "An AI reading companion that gives second-language readers spoiler-safe vocabulary previews before each chapter. Live in the browser, no install needed.",
+      "tags": [
+        "LLM Agents",
+        "TypeScript"
+      ],
+      "bullets": [
+        "Designed a 3-agent LLM workflow (profiler, chapter parser, spoiler-safe context generator), processing 47 chapters across 4 books.",
+        "Added guardrails (schema validation, automatic retries, spoiler checks) so every model output stays structured and usable.",
+        "Released it open source, then deployed the frontend on Vercel and the backend on Railway so anyone can try it."
+      ]
+    },
+    {
+      "show": true,
+      "id": "awg",
+      "title": "Retail Program Impact",
+      "kind": "Business practicum, 2025",
+      "cats": [
+        "Data",
+        "Marketing"
+      ],
+      "summary": "Do retail programs actually lift new-product sales? A store-level analysis for a grocery wholesaler.",
+      "tags": [
+        "SQL",
+        "Python",
+        "Regression"
+      ],
+      "bullets": [
+        "Joined store, product, program, and sales tables in SQL into one validated store-level dataset.",
+        "Used regression with interaction terms in Python to see how program effects differed by brand, division, and category.",
+        "Recommended selective, category-specific deployment with a pilot, and presented it to the client."
+      ]
+    },
+    {
+      "show": true,
+      "id": "pjm",
+      "title": "Dynamic Electricity Pricing",
+      "kind": "Research paper, first author, 2026",
+      "cats": [
+        "Data",
+        "Finance"
+      ],
+      "summary": "A day-ahead load forecast (MAPE 2.73%) and a bounded pricing rule that cut simulated peak demand 12.5%.",
+      "tags": [
+        "Python",
+        "XGBoost",
+        "Research"
+      ],
+      "bullets": [
+        "Cleaned and merged 25,990 hourly records of grid load, weather, and day-ahead prices.",
+        "Built a 24-hour-ahead XGBoost forecast with a strict time-based train/test split.",
+        "Simulated a three-tier pricing rule: peak demand down 12.5% vs. flat rate, bills down 11.7% vs. time-of-use. Presented at SIEDS."
+      ]
+    },
+    {
+      "show": true,
+      "id": "usdt",
+      "title": "USDT Systemic Risk Monitor",
+      "kind": "Course project, 2025",
+      "cats": [
+        "Data",
+        "Finance"
+      ],
+      "summary": "A Dune dashboard over millions of Ethereum logs, finding whale trades often exceed 80% of daily volume.",
+      "tags": [
+        "SQL",
+        "Dashboard"
+      ],
+      "bullets": [
+        "Defined 4 risk KPIs for Tether, including pool imbalance and trade slippage in basis points.",
+        "Built the dashboard in SQL with CTEs and window functions.",
+        "Segmented volume by trade size, challenging the assumption that flows are retail-driven."
+      ]
+    }
+  ]
+}
