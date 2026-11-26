@@ -1,0 +1,68 @@
+{
+  "items": [
+    {
+      "show": true,
+      "id": "ta",
+      "title": "Teaching Assistant, BADM 372 IS/OM Practicum",
+      "org": "University of Illinois Urbana-Champaign",
+      "dates": "Sep 2026 – Present",
+      "summary": "Project manager for 2 student software teams; led a hosting migration study from Render to Vercel and Supabase.",
+      "tags": [
+        "Project Management"
+      ],
+      "bullets": [
+        "Act as project manager for student teams on 2 semester-long software projects, tracking milestones in GitHub Issues and keeping teams on schedule for demos.",
+        "Led a hosting migration study at the instructor’s request, testing a move from Render to Vercel and Supabase to cut slow startup times, then reported trade-offs and recommendations.",
+        "Hold office hours on development and deployment issues and write step-by-step troubleshooting guides for beginner students."
+      ]
+    },
+    {
+      "show": true,
+      "id": "lead",
+      "title": "AI Solution Consultant",
+      "org": "Chicago LEAD, student consulting program at UIUC",
+      "dates": "Feb 2026 – Present",
+      "summary": "Co-built a prototype AI tool that drafts blog posts in a client’s brand voice, trialed by the client team.",
+      "tags": [
+        "LLM Agents",
+        "Client Communication"
+      ],
+      "bullets": [
+        "Co-built a prototype AI tool that generates first-draft blog content from a topic and brand-voice guidelines, trialed by the client team.",
+        "Owned client-facing delivery: meetings, agendas, decision logs, and deliverable tracking to keep a non-technical client aligned."
+      ]
+    },
+    {
+      "show": true,
+      "id": "torras",
+      "title": "Marketing Analyst Intern",
+      "org": "TORRAS, Shenzhen",
+      "dates": "Apr 2025 – Jul 2025",
+      "summary": "Scaled creator collaborations from 6 to 15+ per month and lifted Meta Ads CTR 10% through A/B tests.",
+      "tags": [
+        "A/B Testing",
+        "Excel"
+      ],
+      "bullets": [
+        "Sourced 200+ U.S. creators per month across YouTube, Instagram, and TikTok with an Excel scoring workflow, collaborating with 30+ each month.",
+        "Ran A/B tests on Meta Ads video creatives and shifted budget toward the winners, lifting CTR by 10%.",
+        "Standardized creator selection criteria, scaling monthly collaborations from 6 to 15+."
+      ]
+    },
+    {
+      "show": true,
+      "id": "qianhai",
+      "title": "Industry Analyst Assistant",
+      "org": "Qianhai Weigang Capital Fund, Shenzhen",
+      "dates": "Jan 2024 – Feb 2024",
+      "summary": "Analyzed 50+ annual reports for a 17-page autonomous-driving sector report.",
+      "tags": [
+        "Research"
+      ],
+      "bullets": [
+        "Analyzed 50+ company annual reports to map the autonomous-driving value chain, market size, and competitive risks.",
+        "Supported a 17-page industry report and presentation for senior investment staff."
+      ]
+    }
+  ]
+}

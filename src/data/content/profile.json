@@ -1,0 +1,45 @@
+{
+  "name": "You Wu",
+  "firstName": "Mia",
+  "initials": "YW",
+  "status": "Open to analyst roles from January 2027",
+  "headline": "Hi, I'm Mia. I turn messy data into decisions, and ideas into working AI tools.",
+  "intro": "Business Analytics graduate student at the University of Illinois, with a finance background and a habit of building the tools I wish existed.",
+  "photo": "photo.jpg",
+  "glance": [
+    {
+      "show": true,
+      "label": "Major, University of Illinois",
+      "value": "M.S. Business Analytics",
+      "wide": true
+    },
+    {
+      "show": true,
+      "label": "GPA",
+      "value": "3.95/4.0"
+    },
+    {
+      "show": true,
+      "label": "Available from",
+      "value": "Jan 2027"
+    },
+    {
+      "show": true,
+      "label": "Based in",
+      "value": "Chicago, open to relocation",
+      "wide": true
+    }
+  ],
+  "links": {
+    "resume": "You_Wu_Resume.pdf",
+    "linkedin": "https://www.linkedin.com/in/you-wu-uiuc",
+    "github": "https://github.com/kiwi9t",
+    "email": "youwu66@outlook.com",
+    "formEndpoint": "https://formspree.io/f/mvkaldwy"
+  },
+  "contact": {
+    "heading": "Let's talk",
+    "text": "Hiring for an analyst role, or working on something interesting? Send a note or grab my resume."
+  },
+  "lastUpdated": "November 2026"
+}

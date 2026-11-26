@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "show": true,
+      "icon": "film",
+      "title": "Horror films",
+      "text": "A genuine fan, and curious about how they’re made."
+    },
+    {
+      "show": true,
+      "icon": "code",
+      "title": "Weekend AI builds",
+      "text": "Vibe-coding small agents just to see what works."
+    }
+  ]
+}

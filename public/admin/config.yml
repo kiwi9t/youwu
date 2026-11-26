@@ -1,0 +1,174 @@
+# Editor settings. Open https://kiwi9t.github.io/youwu/admin/ to use it.
+# Sign in with a GitHub access token that can write to this repository.
+# Every save is a commit on main, so the full edit history is the repository's commit history.
+backend:
+  name: github
+  repo: kiwi9t/youwu
+  branch: main
+  commit_messages:
+    create: 'Content: create {{collection}} "{{slug}}"'
+    update: 'Content: update {{collection}} "{{slug}}"'
+    delete: 'Content: delete {{collection}} "{{slug}}"'
+    uploadMedia: 'Content: upload "{{path}}"'
+    deleteMedia: 'Content: delete "{{path}}"'
+
+site_url: https://kiwi9t.github.io/youwu/
+display_url: https://kiwi9t.github.io/youwu/
+logo:
+  src: https://kiwi9t.github.io/youwu/favicon.svg
+
+# Uploaded images and files go to public/uploads and are referenced as "uploads/<file>".
+media_folder: public/uploads
+public_folder: uploads
+
+collections:
+  - name: content
+    label: Site content
+    editor: { preview: true }
+    files:
+      - name: profile
+        label: Profile, links and contact
+        file: src/data/content/profile.json
+        format: json
+        fields:
+          - { label: Full name, name: name, widget: string }
+          - { label: First name, name: firstName, widget: string }
+          - { label: Initials, name: initials, widget: string, hint: 'Shown in the logo, and instead of the photo if there is none.' }
+          - { label: Status line, name: status, widget: string, hint: The line with the green dot above the headline. }
+          - { label: Headline, name: headline, widget: text }
+          - { label: Intro, name: intro, widget: text }
+          - { label: Photo, name: photo, widget: image, required: false, hint: Leave empty to show your initials. }
+          - label: At a glance
+            name: glance
+            widget: list
+            summary: "{{fields.show | ternary('', '[Hidden] ')}}{{fields.label}}: {{fields.value}}"
+            fields:
+              - &show { label: Show on site, name: show, widget: boolean, default: true, hint: Turn off to hide this item without deleting it. }
+              - { label: Label, name: label, widget: string }
+              - { label: Value, name: value, widget: string }
+              - { label: Full width, name: wide, widget: boolean, default: false, required: false }
+          - label: Links
+            name: links
+            widget: object
+            fields:
+              - { label: Resume PDF, name: resume, widget: file }
+              - { label: LinkedIn URL, name: linkedin, widget: string }
+              - { label: GitHub URL, name: github, widget: string }
+              - { label: Email, name: email, widget: string }
+              - { label: Formspree URL, name: formEndpoint, widget: string, required: false, hint: Leave empty to make "Send message" open the visitor's email app. }
+          - label: Contact section
+            name: contact
+            widget: object
+            fields:
+              - { label: Heading, name: heading, widget: string }
+              - { label: Text, name: text, widget: text }
+          - { label: Last updated (footer), name: lastUpdated, widget: string }
+
+      - name: about
+        label: About
+        file: src/data/content/about.json
+        format: json
+        fields:
+          - label: Paragraphs
+            name: items
+            widget: list
+            summary: "{{fields.show | ternary('', '[Hidden] ')}}{{fields.text | truncate(60)}}"
+            fields:
+              - *show
+              - { label: Text, name: text, widget: text }
+
+      - name: education
+        label: Education
+        file: src/data/content/education.json
+        format: json
+        fields:
+          - label: Schools
+            name: items
+            widget: list
+            summary: "{{fields.show | ternary('', '[Hidden] ')}}{{fields.school}}"
+            fields:
+              - *show
+              - { label: School, name: school, widget: string }
+              - { label: Degree, name: degree, widget: string }
+              - { label: Dates and GPA, name: meta, widget: string }
+              - { label: Note, name: note, widget: string, required: false }
+
+      - name: experience
+        label: Experience
+        file: src/data/content/experience.json
+        format: json
+        fields:
+          - label: Roles
+            name: items
+            widget: list
+            summary: "{{fields.show | ternary('', '[Hidden] ')}}{{fields.title}} ({{fields.dates}})"
+            hint: Drag to reorder. A role whose dates contain "Present" gets a green dot.
+            fields:
+              - *show
+              - { label: ID, name: id, widget: string, hint: 'A short unique word, lowercase, no spaces (for example "ta").' }
+              - { label: Title, name: title, widget: string }
+              - { label: Organization, name: org, widget: string }
+              - { label: Dates, name: dates, widget: string }
+              - { label: Summary, name: summary, widget: text }
+              - &tags { label: Tags, name: tags, widget: list, required: false, hint: A tag that matches a skill makes that skill clickable. }
+              - &bullets { label: Detail bullets, name: bullets, widget: list, field: { label: Bullet, name: bullet, widget: text } }
+
+      - name: projects
+        label: Projects
+        file: src/data/content/projects.json
+        format: json
+        fields:
+          - { label: Filter categories, name: categories, widget: list, hint: The filter buttons above the projects. "All" is added automatically. }
+          - label: Projects
+            name: items
+            widget: list
+            summary: "{{fields.show | ternary('', '[Hidden] ')}}{{fields.title}}"
+            hint: Drag to reorder. The first visible project is shown large.
+            fields:
+              - *show
+              - { label: ID, name: id, widget: string, hint: 'A short unique word, lowercase, no spaces (for example "qr").' }
+              - { label: Title, name: title, widget: string }
+              - { label: Kind and year, name: kind, widget: string }
+              - { label: Categories, name: cats, widget: list, required: false, hint: Must match the filter categories above. }
+              - { label: GitHub or project link, name: link, widget: string, required: false }
+              - { label: Screenshot, name: image, widget: image, required: false }
+              - { label: Summary, name: summary, widget: text }
+              - *tags
+              - *bullets
+
+      - name: skills
+        label: Skills and certifications
+        file: src/data/content/skills.json
+        format: json
+        fields:
+          - label: Skill groups
+            name: groups
+            widget: list
+            summary: "{{fields.show | ternary('', '[Hidden] ')}}{{fields.name}}"
+            fields:
+              - *show
+              - { label: Group name, name: name, widget: string }
+              - { label: Skills, name: skills, widget: list }
+          - label: Certifications
+            name: certifications
+            widget: list
+            summary: "{{fields.show | ternary('', '[Hidden] ')}}{{fields.name}}"
+            required: false
+            fields:
+              - *show
+              - { label: Certification, name: name, widget: string }
+
+      - name: interests
+        label: Beyond work
+        file: src/data/content/interests.json
+        format: json
+        fields:
+          - label: Interests
+            name: items
+            widget: list
+            summary: "{{fields.show | ternary('', '[Hidden] ')}}{{fields.title}}"
+            fields:
+              - *show
+              - { label: Icon, name: icon, widget: select, options: [film, code, plus], default: plus }
+              - { label: Title, name: title, widget: string }
+              - { label: Text, name: text, widget: text }

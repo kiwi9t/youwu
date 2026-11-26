@@ -1,0 +1,18 @@
+{
+  "items": [
+    {
+      "show": true,
+      "school": "University of Illinois Urbana-Champaign",
+      "degree": "M.S. Business Analytics (STEM), Gies College of Business",
+      "meta": "Expected Dec 2026, GPA 3.95/4.0",
+      "note": "Professional Development Scholarship"
+    },
+    {
+      "show": true,
+      "school": "Zhongnan University of Economics and Law",
+      "degree": "B.Econ. Finance, Wuhan, China",
+      "meta": "Jun 2025, GPA 3.86/4.0",
+      "note": "2nd Prize University Scholarship"
+    }
+  ]
+}
