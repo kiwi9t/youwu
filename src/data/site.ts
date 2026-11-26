@@ -11,7 +11,7 @@ export const profile = {
     'Business Analytics graduate student at the University of Illinois, with a finance background and a habit of building the tools I wish existed.',
   // Put your photo in /public (for example /public/photo.jpg) and set photo: 'photo.jpg'.
   // Leave it empty to show your initials instead.
-  photo: '',
+  photo: 'photo.jpg',
   glance: [
     { label: 'Major, University of Illinois', value: 'M.S. Business Analytics', wide: true },
     { label: 'GPA', value: '3.95/4.0' },
